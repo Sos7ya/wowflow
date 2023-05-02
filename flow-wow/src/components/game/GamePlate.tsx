@@ -25,8 +25,7 @@ const GamePlate = () =>{
     return(
         <>
         <div className='main-wraper'>
-            <h2>ПИОНОМАНИЯ</h2>
-            <p>Нажми на пион чтобы получить приз!</p>
+            <p>Нажми на пион, чтобы получить приз!</p>
             <div className="game-wraper">
                 <div className = "flower"><GameElement {...checkData()}/></div>
                 <div className = "flower"><GameElement {...mockAction}/></div>

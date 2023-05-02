@@ -6,7 +6,7 @@ function Header(){
     return (
         <header className="header-wraper">
             <div className="header-logo">
-                HEADER LOGO
+                <h2>ПИОНОМАНИЯ</h2>
             </div>
             <ul className="header-list">
                 <li>Ссылка на раздел</li>
