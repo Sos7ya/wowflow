@@ -1,0 +1,25 @@
+.header-wraper{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.header-list{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-self: end;
+    text-decoration: none;
+}
+
+.header-list li{
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+}
