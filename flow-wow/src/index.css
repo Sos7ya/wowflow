@@ -16,8 +16,9 @@ h2{
 .footer{
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 20px;
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin: 0 15px
 }
