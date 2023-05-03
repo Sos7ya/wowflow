@@ -3,7 +3,7 @@ import gameReducer from './slice'
 
 export const store =()=> configureStore({
     reducer:{
-        game: gameReducer,
+        game: gameReducer
     },
 });
 

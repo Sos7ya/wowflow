@@ -8,14 +8,37 @@
 
 .game-wraper{
     max-width: auto;
-    display: grid;
+    display: flex;
+    flex-direction: row;
     grid-template-columns: 8rem 8rem 8rem;
     grid-template-rows: 8rem 8rem 8rem;
     align-self: center;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
+    overflow: hidden;
+    height: 40vh;
+}
+
+.flower1{
+    animation: fall 8s infinite;
+}
+
+.flower2{
+    animation: fall 4s infinite;
+}
+
+.flower3{
+    animation: fall 6s infinite;
+}
+
+@keyframes fall {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(50vh);
+    }
     
-    height: 80%;
 }
 
 @media screen and (max-width:1024px) {
