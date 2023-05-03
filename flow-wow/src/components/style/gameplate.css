@@ -20,11 +20,11 @@
 }
 
 .flower1{
-    animation: fall 8s infinite;
+    animation: fall 12s infinite;
 }
 
 .flower2{
-    animation: fall 4s infinite;
+    animation: fall 10s infinite;
 }
 
 .flower3{
