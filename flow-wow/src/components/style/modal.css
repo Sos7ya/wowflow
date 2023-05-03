@@ -76,7 +76,7 @@
   
   @keyframes slide-in {
     from {
-      transform: translateY(-150px);
+      transform: translateY(150px);
     }
     to {
       transform: translateY(0);

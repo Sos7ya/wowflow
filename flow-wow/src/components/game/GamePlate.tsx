@@ -51,15 +51,15 @@ const GamePlate = () =>{
                 onClose={() => setModal(false)}
             />
             <div className="game-wraper">
-                <div className = "flower1" onClick={() => setTimeout(()=>setModal(true), 500)}><GameElement/></div>
-                <div className = "flower2" onClick={() => setTimeout(()=>setModal(true), 500)}><GameElement/></div>
-                <div className = "flower3" onClick={() => setTimeout(()=>setModal(true), 500)}><GameElement/></div>
-                <div className = "flower1" onClick={() => setTimeout(()=>setModal(true), 500)}><GameElement/></div>
-                <div className = "flower2" onClick={() => setTimeout(()=>setModal(true), 500)}><GameElement/></div>
-                <div className = "flower3" onClick={() => setTimeout(()=>setModal(true), 500)}><GameElement/></div>
-                <div className = "flower1" onClick={() => setTimeout(()=>setModal(true), 500)}><GameElement/></div>
-                <div className = "flower2" onClick={() => setTimeout(()=>setModal(true), 500)}><GameElement/></div>
-                <div className = "flower3" onClick={() => setTimeout(()=>setModal(true), 500)}><GameElement/></div>
+                <div className = "flower1" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower2" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower3" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower4" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower5" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower6" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower7" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower8" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower9" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
             </div>
             <p>1 попытка каждые 24 часа</p>
         </div>

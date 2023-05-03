@@ -20,25 +20,98 @@
 }
 
 .flower1{
-    animation: fall 12s infinite;
+    top: -5vh;
+    position: relative;
+    animation: fall 8s infinite;
+    z-index: 3;
+    /* animation-delay: 0.3s; */
 }
 
 .flower2{
-    animation: fall 10s infinite;
+    top: -5vh;
+    position: relative;
+    animation: fall 17s infinite;
+    z-index: 2;
+    scale: 1.2;
 }
 
 .flower3{
-    animation: fall 6s infinite;
+    top: -5vh;
+    position: relative;
+    animation: fall 23s infinite;
+    scale: 1.5;
+    z-index: 1;
+    /* animation-delay: 0.1s; */
+}
+
+.flower4{
+    top: -5vh;
+    position: relative;
+    animation: fall 10s infinite;
+    scale: 1.1;
+    z-index: 1;
+    /* animation-delay: 0.2s; */
+}
+
+.flower5{
+    top: -5vh;
+    position: relative;
+    animation: fall 12s infinite;
+    scale: 1.2;
+    z-index: 1;
+}
+
+.flower6{
+    top: -5vh;
+    position: relative;
+    animation: fall 28s infinite;
+    z-index: 1;
+}
+
+.flower7{
+    top: -5vh;
+    position: relative;
+    animation: fall 15s infinite;
+    scale: 1.5;
+    z-index: 1;
+    animation-delay: 0.2s;
+}
+
+.flower8{
+    top: -5vh;
+    position: relative;
+    animation: fall 10s infinite;
+    z-index: 1;
+    /* animation-delay: 0.3s; */
+}
+
+.flower9{
+    top: -5vh;
+    position: relative;
+    animation: fall 20s infinite;
+    scale: 1.5;
+    z-index: 1;
 }
 
 @keyframes fall {
     0%{
-        transform: translateY(0);
+        transform: translateY(-5vh)
+                    rotate(0deg);
     }
     100%{
-        transform: translateY(50vh);
+        transform: translateY(45vh)
+                    rotate(360deg);
     }
     
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (max-width:1024px) {
