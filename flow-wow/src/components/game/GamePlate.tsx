@@ -1,45 +1,40 @@
-import React, { ReactNode, createElement, useState} from "react";
-import GameElement from './GameElement';
+import React, { ReactNode, useEffect, useState} from "react";
 import '../style/gameplate.css'
 import Modal from "../modal/modal";
 
-// import { Skeleton } from 'antd';
-
-// import {getActionDetaliSource} from '../store/selectors';
-// import { useAppSelector } from '../store/hook';
+import { Linear, TweenLite, TweenMax, Sine } from "gsap";
 
 import {mockAction} from '../store/thunk'
 
-const GamePlate = () =>{
-    // const data = useAppSelector(getActionDetaliSource);
-    // // function checkData(){
-    // //     const error ={
-    // //         id: 1,
-    // //         value: 'error',
-    // //         quantity: 0
-    // //     }
-    // //     if(!data){
-    // //         return  {...error}
-    // //     }
-    // //     else{
-    // //         return {...data}
-    // //     }
-    // // }
+export default function GamePlate(){
+    
+    useEffect(()=>{
+        const papa = document.getElementById('container')
+        function R(min:number,max:number) {return min+Math.random()*(max-min)};
+        // const h = 100;
+        const w = 10;
+        const total: number = 30;
+        for(let i=0; i<total; i++){
+            const test = document.createElement('div')
+            TweenLite.set(test,{attr:{class:'element'},x:R(-10,w),y:-100});
+            anim(test);
+            test.style.cursor = 'pointer';
+            test.addEventListener('click',()=>{
+                setModal(true)
+            })
+            test.innerHTML = '<img src = "/flower.png" alt = "no img"></img>'
+            papa?.appendChild(test);
+        }
+        function anim(elm:any){
+            TweenMax.to(elm,R(10,25),{y:100,ease:Linear.easeNone,repeat:-1,delay:-30});
+            TweenMax.to(elm,R(2,8),{rotation:(360),repeat:-1,yoyo:false,ease:Sine.easeInOut,delay:-5});
+            }
+        },[])
+        
     const [isModal, setModal] = useState(false);
-    // setTimeout(()=>{let target = document.querySelector('.game-wraper'); let newFlower = createElement(`<div className = "flower10" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>`); console.log('added flower')}, 2000)
     let mockText :string = 'Поздравляю, ваш приз %приз_имя% !';
     let mockFooter: ReactNode = <div><button className="modal-btn" onClick={() => window.open('https://flowwow.com/')}>Вперед!</button></div>;
-
-    if (mockAction.quantity===0){
-    mockAction.value = 'Но вот тебе %другая_информация%';
-    mockText = 'Ого, кажется в этот раз тебе не повезло!';
-    mockFooter = '';
-    }
-
-    // if(!data){
-    //     return <Skeleton active/>
-    // }
-
+    
     return(
         <div className='main-wraper'>
             <p>Нажми на пион, чтобы получить приз!</p>
@@ -50,26 +45,9 @@ const GamePlate = () =>{
                 footer={mockFooter}
                 onClose={() => setModal(false)}
             />
-            <div className="game-wraper">
-                <div className = "flower1" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower2" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower3" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower4" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower5" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower6" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower7" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower8" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower9" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower10" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower11" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower12" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower13" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower14" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
-                <div className = "flower15" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+            <div  className="game-wraper"  id="container">
             </div>
             <p>1 попытка каждые 24 часа</p>
         </div>
     )
 }
-
-export default GamePlate;

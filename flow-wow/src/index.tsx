@@ -1,8 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-// import { store } from './app/store';
-// import App from './App';
 import { store } from './components/store/store';
 import './index.css';
 import GamePlate from './components/game/GamePlate';
@@ -32,6 +30,5 @@ root.render(
           </ul>
         </footer>
       </div>
-      {/* <App /> */}
     </Provider>
 );
