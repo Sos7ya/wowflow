@@ -10,6 +10,7 @@
     max-width: auto;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     grid-template-columns: 8rem 8rem 8rem;
     grid-template-rows: 8rem 8rem 8rem;
     align-self: center;
@@ -20,7 +21,7 @@
 }
 
 .flower1{
-    top: -5vh;
+    top: -10vh;
     position: relative;
     animation: fall 8s infinite;
     z-index: 3;
@@ -28,7 +29,7 @@
 }
 
 .flower2{
-    top: -5vh;
+    top: -15vh;
     position: relative;
     animation: fall 17s infinite;
     z-index: 2;
@@ -36,7 +37,7 @@
 }
 
 .flower3{
-    top: -5vh;
+    top: -15vh;
     position: relative;
     animation: fall 23s infinite;
     scale: 1.5;
@@ -45,7 +46,7 @@
 }
 
 .flower4{
-    top: -5vh;
+    top: -15vh;
     position: relative;
     animation: fall 10s infinite;
     scale: 1.1;
@@ -54,7 +55,7 @@
 }
 
 .flower5{
-    top: -5vh;
+    top: -15vh;
     position: relative;
     animation: fall 12s infinite;
     scale: 1.2;
@@ -62,14 +63,14 @@
 }
 
 .flower6{
-    top: -5vh;
+    top: -15vh;
     position: relative;
     animation: fall 28s infinite;
     z-index: 1;
 }
 
 .flower7{
-    top: -5vh;
+    top: -15vh;
     position: relative;
     animation: fall 15s infinite;
     scale: 1.5;
@@ -78,7 +79,7 @@
 }
 
 .flower8{
-    top: -5vh;
+    top: -15vh;
     position: relative;
     animation: fall 10s infinite;
     z-index: 1;
@@ -86,20 +87,72 @@
 }
 
 .flower9{
-    top: -5vh;
+    top: -20vh;
     position: relative;
     animation: fall 20s infinite;
     scale: 1.5;
     z-index: 1;
 }
 
+.flower10{
+    top: -20vh;
+    position: relative;
+    animation: fall 8s infinite;
+    z-index: 3;
+    animation-delay: 0.6s;
+    z-index: 5;
+}
+
+.flower11{
+    top: -20vh;
+    position: relative;
+    animation: fall 14s infinite;
+    z-index: 3;
+    animation-delay: 0.6s;
+    z-index: 5;
+}
+.flower12{
+    top: -20vh;
+    position: relative;
+    animation: fall 22s infinite;
+    z-index: 3;
+    animation-delay: 0.6s;
+    z-index: 5;
+}
+.flower13{
+    top: -30vh;
+    position: relative;
+    animation: fall 24s infinite;
+    z-index: 3;
+    animation-delay: 0.3s;
+    z-index: 5;
+}
+
+.flower14{
+    top: -30vh;
+    position: relative;
+    animation: fall 10s infinite;
+    z-index: 3;
+    animation-delay: 0.6s;
+    z-index: 5;
+}
+
+.flower15{
+    top: -30vh;
+    position: relative;
+    animation: fall 13s infinite;
+    z-index: 3;
+    animation-delay: 0.8s;
+    z-index: 5;
+}
+
 @keyframes fall {
     0%{
-        transform: translateY(-5vh)
+        transform: translateY(-15vh)
                     rotate(0deg);
     }
     100%{
-        transform: translateY(45vh)
+        transform: translateY(50vh)
                     rotate(360deg);
     }
     

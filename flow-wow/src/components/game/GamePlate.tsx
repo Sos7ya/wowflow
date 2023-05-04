@@ -60,6 +60,12 @@ const GamePlate = () =>{
                 <div className = "flower7" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
                 <div className = "flower8" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
                 <div className = "flower9" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower10" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower11" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower12" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower13" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower14" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
+                <div className = "flower15" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>
             </div>
             <p>1 попытка каждые 24 часа</p>
         </div>
