@@ -1,4 +1,4 @@
-import React, { ReactNode, useState} from "react";
+import React, { ReactNode, createElement, useState} from "react";
 import GameElement from './GameElement';
 import '../style/gameplate.css'
 import Modal from "../modal/modal";
@@ -26,7 +26,7 @@ const GamePlate = () =>{
     // //     }
     // // }
     const [isModal, setModal] = useState(false);
-
+    // setTimeout(()=>{let target = document.querySelector('.game-wraper'); let newFlower = createElement(`<div className = "flower10" onClick={() => setTimeout(()=>setModal(true), 300)}><GameElement/></div>`); console.log('added flower')}, 2000)
     let mockText :string = 'Поздравляю, ваш приз %приз_имя% !';
     let mockFooter: ReactNode = <div><button className="modal-btn" onClick={() => window.open('https://flowwow.com/')}>Вперед!</button></div>;
 

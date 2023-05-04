@@ -3,11 +3,12 @@
     border: none;
     cursor: pointer;
     background: none;
+    max-width: 80px;
 }
 
 .flower-btn img{
     width: 100%;
-    object-fit: fill;
+    object-fit:cover
 }
 
 .modal-btn{
