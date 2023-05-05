@@ -1,5 +1,5 @@
 
-export function fetchValue(value=1){
-    return new Promise<{data: number}>((resolve)=>
+export function fetchValue(value:string){
+    return new Promise<{data: string}>((resolve)=>
         setTimeout(()=>resolve({data: value}), 500))
 }
