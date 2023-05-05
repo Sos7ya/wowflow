@@ -1,11 +1,11 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import  "../style/modal.css";
 import { keyboardKey } from "@testing-library/user-event";
 
 interface IProps{
     isVisible: boolean
     title: ReactNode,
-    content: ReactNode,
+    content: string,
     footer: ReactNode,
     onClose: ()=> void
 }
@@ -21,10 +21,13 @@ const Modal = ({ isVisible = false, title, content, footer, onClose }:IProps) =>
       }
     };
   
-    React.useEffect(() => {
+    useEffect(() => {
       document.addEventListener('keydown', keydownHandler);
       return () => document.removeEventListener('keydown', keydownHandler);
+
     });
+    
+    
   
     return !isVisible ? null : (
       <div className="modal" onClick={onClose}>
@@ -36,9 +39,10 @@ const Modal = ({ isVisible = false, title, content, footer, onClose }:IProps) =>
             </span> */}
           </div>
           <div className="modal-body">
-            <div className="modal-content">{content}</div>
+            <div id="content" className="modal-content">{content}</div>
           </div>
-          {footer && <div className="modal-footer">{footer}</div>}
+          
+          {footer && <div className="modal-footer">{footer} <button className="copy-btn" onClick={()=> {navigator.clipboard.writeText(content)}}>Скопировать</button></div>}
         </div>
       </div>
     );

@@ -47,7 +47,9 @@
   }
   
   .modal-footer {
+    flex-direction: row-reverse;
     justify-content: center;
+    gap: 1rem;
   }
   
   .modal-close {
@@ -63,6 +65,13 @@
   .modal-content {
     padding: 1rem;
     text-align: center;
+  }
+
+  .copy-btn{
+    padding: 5px 5px;
+    align-self: center;
+    text-align: center;
+    width: 20%;
   }
   
   @keyframes appear {

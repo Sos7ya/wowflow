@@ -26,7 +26,7 @@ export default function GamePlate(){
             papa?.appendChild(test);
         }
         function anim(elm:any){
-            TweenMax.to(elm,R(10,25),{y:100,ease:Linear.easeNone,repeat:-1,delay:-30});
+            TweenMax.to(elm,R(10,25),{y:150,ease:Linear.easeNone,repeat:-1,delay:-30});
             TweenMax.to(elm,R(2,8),{rotation:(360),repeat:-1,yoyo:false,ease:Sine.easeInOut,delay:-5});
             TweenMax.to(elm, {scale:R(1, 1.9)});
             }
@@ -35,6 +35,7 @@ export default function GamePlate(){
     const [isModal, setModal] = useState(false);
     let mockText :string = 'Поздравляю, ваш приз %приз_имя% !';
     let mockFooter: ReactNode = <div><button className="modal-btn" onClick={() => window.open('https://flowwow.com/')}>Перейти в пиложение!</button></div>;
+    let txt = mockAction.value;
     
     return(
         <div className='main-wraper'>
@@ -42,7 +43,7 @@ export default function GamePlate(){
             <Modal
                 isVisible={isModal}
                 title={mockText}
-                content={<p>{mockAction.value}</p>}
+                content={txt}
                 footer={mockFooter}
                 onClose={() => setModal(false)}
             />
