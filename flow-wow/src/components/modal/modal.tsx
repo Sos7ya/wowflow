@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import  "../style/modal.css";
 import { keyboardKey } from "@testing-library/user-event";
 
@@ -26,7 +26,7 @@ const Modal = ({ isVisible = false, title, content, footer, onClose }:IProps) =>
       return () => document.removeEventListener('keydown', keydownHandler);
 
     });
-    
+    const [done, copyDone] = useState(false)
     
   
     return !isVisible ? null : (
@@ -42,7 +42,11 @@ const Modal = ({ isVisible = false, title, content, footer, onClose }:IProps) =>
             <div id="content" className="modal-content">{content}</div>
           </div>
           
-          {footer && <div className="modal-footer">{footer} <button className="copy-btn" onClick={()=> {navigator.clipboard.writeText(content)}}>Скопировать</button></div>}
+          {footer && <div className="modal-footer">{footer} <button className={`copy-btn ${done? 'done' : 'wait'}`} onClick={()=> {
+            copyDone(true);
+            setInterval(()=> copyDone(false), 700);
+            navigator.clipboard.writeText(content);
+            }}>Скопировать<span className="copy-msg" aria-hidden="true">Готово!</span></button></div>}
         </div>
       </div>
     );
