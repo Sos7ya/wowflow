@@ -3,7 +3,7 @@
     padding: 2rem;
     text-align: center;
     justify-content: center;
-    width: 30vw;
+    width: 50vw;
 }
 
 .maincontent-title{
@@ -17,7 +17,7 @@
 .maincontent-title h2{
     font-family: 'Montserrat';
     font-style: normal;
-    font-size: 5vw;
+    font-size: 10vw;
     font-weight: 900;
     line-height: 103%;
     text-transform: uppercase;
@@ -38,7 +38,7 @@
 
 .maincontent-description p{
     font-family: 'Montserrat';
-    font-size: 1vw;
+    font-size: 2vw;
     font-weight: 400;
     text-align: center;
 }
@@ -51,5 +51,5 @@
 .maincontent-disclaymer h3{
     color: #F98DBF;
     font-weight: 900;
-    font-size: 1.2vw;
+    font-size: 2vw;
 }
