@@ -1,5 +1,9 @@
-
-export function fetchValue(value=1){
-    return new Promise<{data: number}>((resolve)=>
-        setTimeout(()=>resolve({data: value}), 500))
+const mockAction ={
+    id: 1,
+    value: 'КОД КУПОНА',
+    quantity: 1
+}
+export function fetchElement(){
+    return new Promise<{data: object}>((resolve)=>
+        setTimeout(()=>resolve({data: mockAction}), 500))
 }

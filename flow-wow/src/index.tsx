@@ -14,19 +14,12 @@ root.render(
       <div className='main'>
         <div className='main-content'>
           <Header />
-          <div><h2>раздел</h2><p>Наполнение раздела</p></div>
-          <div><h2>раздел</h2><p>Наполнение раздела</p></div>
           <GamePlate />
-          <div><h2>раздел</h2><p>Наполнение раздела</p></div>
-          <div><h2>раздел</h2><p>Наполнение раздела</p></div>
           </div>
         <footer>
           <ul className='footer'>
-            <li>Политика конфиденциальности</li>
-            <li>Контакты</li>
-            <li>Общая информация</li>
-            <li>Другая информация</li>
-            <li>Партнеры</li>
+           <li>ПРАВИЛА ПРОВЕДЕНИЯ АКЦИИ</li>
+           <li>LOGO</li>
           </ul>
         </footer>
       </div>
