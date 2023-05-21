@@ -5,6 +5,7 @@ import { store } from './components/store/store';
 import './index.css';
 import GamePlate from './components/game/GamePlate';
 import Header from './components/header/Header';
+import Footer from './components/footer/footer';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -16,12 +17,7 @@ root.render(
           <Header />
           <GamePlate />
           </div>
-        <footer>
-          <ul className='footer'>
-           <li>ПРАВИЛА ПРОВЕДЕНИЯ АКЦИИ</li>
-           <li>LOGO</li>
-          </ul>
-        </footer>
+          <Footer/>
       </div>
     </Provider>
 );

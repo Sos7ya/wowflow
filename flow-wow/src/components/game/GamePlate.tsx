@@ -49,11 +49,14 @@ export default function GamePlate(){
             />
             <div className="game-area">
                 <img className="handUp" src="/img/handUp.png" alt="hand" />
+                <img className="cloudLeft" src="/img/cloudLeft.png" alt="cloud" />
                 <div className='main-wraper'>
                     <div  className="game-wraper"  id="container">
                     {/* Here comes the game! */}
                     </div>
                 </div>
+                <img className="handDown" src="/img/handDown.png" alt="some picks" />
+                <img className="cloudRight" src="/img/cloudRighteft.png" alt="cloud" />
             </div>
         </>
     )

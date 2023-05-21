@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    top: 50%;
 }
 
 .main-wraper{
@@ -13,7 +14,7 @@
     justify-content: center;
     border: 1px solid #FFFFFF;
     border-radius: 50%;
-    padding: 50px;
+    padding: 30px;
 
     filter: drop-shadow(0px 0px 14.0448px #FFFFFF) drop-shadow(0px 0px 4.01281px #FFFFFF) drop-shadow(0px 0px 2.0064px #FFFFFF);
 }
@@ -23,8 +24,8 @@
     align-self: center;
     align-items: baseline;
     justify-content: center;
-    height: 50vw;
-    width: 50vw;
+    height: 40vw;
+    width: 40vw;
 
     background: #FFFFFF;
     box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.25);
@@ -51,19 +52,42 @@
 
 .handUp{
     position: absolute;
-    top: 30%;
+    top: 260px;
     left: 0;
-    width: 25vw;
+    width: 30vw;
+    z-index: 5;
 }
 
-@media screen and (max-width:1024px) {
+.handDown{
+    position: absolute;
+    top: 540px;
+    right: 0;
+    width: 30vw;
+    z-index: 5;
+}
+
+.cloudLeft{
+    position: absolute;
+    top: 260px;
+    right: 0;
+    z-index: 4;
+}
+
+.cloudRight{
+    position: absolute;
+    top: 540px;
+    left: 0;
+    z-index: 4;
+}
+
+@media screen and (max-width:768px) {
     .main-wraper{
         margin: 20px 50px;
     }
     
 
-    /* .game-wraper{
-        width: 30vh;
-        height: 30vh;
-    } */
+    .game-wraper{
+        width: 70vw;
+        height: 70vw;
+    }
 }
