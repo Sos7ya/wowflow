@@ -6,12 +6,11 @@ interface IProps{
     isVisible: boolean
     title: ReactNode,
     content: string,
-    footer: ReactNode,
     onClose: ()=> void
 }
 
 
-const Modal = ({ isVisible = false, title, content, footer, onClose }:IProps) => {
+const Modal = ({ isVisible = false, title, content, onClose }:IProps) => {
     const keydownHandler = ({ key }:keyboardKey) => {
       switch (key) {
         case 'Escape':
@@ -40,13 +39,14 @@ const Modal = ({ isVisible = false, title, content, footer, onClose }:IProps) =>
           <div className="modal-body">
             <div id="content" className="modal-content">{content}</div>
           </div>
-          
-          {footer && <div className="modal-footer">{footer} <button className={`copy-btn ${done? 'done' : 'wait'}`} onClick={()=> {
+
+          {<div className="modal-footer"><button className={`copy-btn ${done? 'done' : 'wait'}`} onClick={()=> {
             copyDone(true);
             setInterval(()=> copyDone(false), 700);
             navigator.clipboard.writeText(content);
             }}>Скопировать<span className="copy-msg" aria-hidden="true">Готово!</span></button></div>}
         </div>
+            <div><button className="app-btn" onClick={() => window.open('https://flowwow.com/')}>Вернуться назад!</button></div>
       </div>
     );
   };

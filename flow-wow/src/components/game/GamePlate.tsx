@@ -34,7 +34,6 @@ export default function GamePlate(){
         
     const [isModal, setModal] = useState(false);
     let mockText :string = 'Поздравляю, ваш приз %приз_имя% !';
-    let mockFooter: ReactNode = <div><button className="modal-btn" onClick={() => window.open('https://flowwow.com/')}>Перейти в пиложение!</button></div>;
     let txt = mockAction.value;
     
     return(
@@ -44,7 +43,7 @@ export default function GamePlate(){
             isVisible={isModal}
             title={mockText}
             content={txt}
-            footer={mockFooter}
+            
             onClose={() => setModal(false)}
             />
             <div className="game-area">
