@@ -97,11 +97,15 @@
   }
 
   .copy-msg{
+    position: absolute;
     text-align: center;
     opacity: 0;
     transform: translateY(-1em);
     color: #000;
     transition: all .500s;
+    border-radius: 6.6px;
+    padding: 10px;
+    color: #ffff;
   }
 
   .done .copy-msg{
