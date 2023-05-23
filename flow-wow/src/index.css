@@ -18,6 +18,14 @@ body {
   background: linear-gradient(180deg, #F98DBF 0%, #FFFFFF 88.4%), #FFFFFF;
 }
 
+.header-logo{
+  z-index: 999;
+}
+
+.footer{
+  z-index: 999;
+}
+
 .main-content{
   flex-grow: 1;
   /* display: flex;

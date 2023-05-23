@@ -5,12 +5,13 @@ import { keyboardKey } from "@testing-library/user-event";
 interface IProps{
     isVisible: boolean
     title: ReactNode,
+    ContentText: string
     content: string,
     onClose: ()=> void
 }
 
 
-const Modal = ({ isVisible = false, title, content, onClose }:IProps) => {
+const Modal = ({ isVisible = false, title, ContentText ,content, onClose }:IProps) => {
     const keydownHandler = ({ key }:keyboardKey) => {
       switch (key) {
         case 'Escape':
@@ -37,6 +38,7 @@ const Modal = ({ isVisible = false, title, content, onClose }:IProps) => {
             </span> */}
           </div>
           <div className="modal-body">
+            <div className="modal-content-text">{ContentText}</div>
             <div id="content" className="modal-content">{content}</div>
           </div>
 
@@ -44,9 +46,9 @@ const Modal = ({ isVisible = false, title, content, onClose }:IProps) => {
             copyDone(true);
             setInterval(()=> copyDone(false), 700);
             navigator.clipboard.writeText(content);
-            }}>Скопировать<span className="copy-msg" aria-hidden="true">Готово!</span></button></div>}
+            }}>Копировать<span className="copy-msg" aria-hidden="true">Готово!</span></button></div>}
         </div>
-            <div><button className="app-btn" onClick={() => window.open('https://flowwow.com/')}>Вернуться назад!</button></div>
+            <div><button className="app-btn" onClick={() => window.open('https://flowwow.com/')}>Вернуться назад! <img src="/img/arrow.svg" alt=""/></button></div>
       </div>
     );
   };

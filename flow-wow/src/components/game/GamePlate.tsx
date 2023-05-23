@@ -35,7 +35,7 @@ export default function GamePlate(){
         },[])
         
     const [isModal, setModal] = useState(false);
-    let mockText :string = 'Поздравляю, ваш приз %приз_имя% !';
+    let mockText :string = 'угадали!';
     
 
     return(
@@ -44,6 +44,8 @@ export default function GamePlate(){
         <Modal
             isVisible={isModal}
             title={mockText}
+            ContentText="Это правильный призовой пион.
+            Глаз у вас — алмаз :)"
             content={'promo'}
             
             onClose={() => setModal(false)}
