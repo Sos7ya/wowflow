@@ -53,7 +53,7 @@
 
 .handUp{
     position: absolute;
-    top: 320px;
+    top: 370px;
     left: 0;
     width: 35vw;
     z-index: 5;
@@ -61,7 +61,7 @@
 
 .handDown{
     position: absolute;
-    top: 540px;
+    top: 580px;
     right: 0px;
     width: 35vw;
     z-index: 5;
@@ -69,14 +69,14 @@
 
 .cloudLeft{
     position: absolute;
-    top: 340px;
+    top: 370px;
     right: 0;
     z-index: 4;
 }
 
 .cloudRight{
     position: absolute;
-    top: 540px;
+    top: 580px;
     left: 0;
     z-index: 4;
 }

@@ -3,14 +3,16 @@ import '../style/gameplate.css'
 import Modal from "../modal/modal";
 import MainContent from "../main/Maincontent";
 import { Linear, TweenLite, TweenMax, Sine } from "gsap";
-// import GameElement from "./GameElement";
+
 
 import { useAppDispatch } from "../store/hook";
-// import { getGameData } from "../store/slice";
-// import { fetchData } from "../store/GameApi";
+import { getGameData } from "../store/slice";
+
 
 export default function GamePlate(){
     const disp = useAppDispatch()
+    const [modalData, setModalData] = useState(true)
+
     useEffect(()=>{
         const papa =  document.getElementById('container')
         function R(min:number,max:number) {return min+Math.random()*(max-min)};
@@ -23,6 +25,7 @@ export default function GamePlate(){
             test.style.cursor = 'pointer';
             test.addEventListener('click',()=>{
                 setModal(true)
+                console.log()
             })
             test.innerHTML = '<img src = "/flower.png" alt = "no img"></img>'
             papa?.appendChild(test);
