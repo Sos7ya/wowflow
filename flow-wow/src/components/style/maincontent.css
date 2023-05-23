@@ -46,9 +46,10 @@
 
 .added-disc{
     color: #FFFFFF;
-    font-size: 15px;
+    font-size: 30px;
     line-height: 18px;
     font-weight: 900;
+    width: 50%;
 
     text-shadow: 0px 0px 14.0448px #FFFFFF;
 }

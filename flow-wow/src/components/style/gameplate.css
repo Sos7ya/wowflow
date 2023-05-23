@@ -28,7 +28,7 @@
     width: 40vw;
 
     background: #FFFFFF;
-    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.25); */
     border-radius: 50%;
     overflow: hidden;
 }
@@ -52,7 +52,7 @@
 
 .handUp{
     position: absolute;
-    top: 340px;
+    top: 330px;
     left: 0;
     width: 35vw;
     z-index: 5;
