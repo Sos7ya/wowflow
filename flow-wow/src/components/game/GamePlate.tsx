@@ -3,15 +3,17 @@ import '../style/gameplate.css'
 import Modal from "../modal/modal";
 import MainContent from "../main/Maincontent";
 import { Linear, TweenLite, TweenMax, Sine } from "gsap";
+// import GameElement from "./GameElement";
 
-import {mockAction} from '../store/thunk'
+import { useAppDispatch } from "../store/hook";
+// import { getGameData } from "../store/slice";
+// import { fetchData } from "../store/GameApi";
 
 export default function GamePlate(){
-    
+    const disp = useAppDispatch()
     useEffect(()=>{
-        const papa = document.getElementById('container')
+        const papa =  document.getElementById('container')
         function R(min:number,max:number) {return min+Math.random()*(max-min)};
-        // const h = 100;
         const w = 10;
         const total: number = 30;
         for(let i=0; i<total; i++){
@@ -34,15 +36,15 @@ export default function GamePlate(){
         
     const [isModal, setModal] = useState(false);
     let mockText :string = 'Поздравляю, ваш приз %приз_имя% !';
-    let txt = mockAction.value;
     
+
     return(
         <>
         <MainContent />
         <Modal
             isVisible={isModal}
             title={mockText}
-            content={txt}
+            content={'promo'}
             
             onClose={() => setModal(false)}
             />
@@ -50,7 +52,7 @@ export default function GamePlate(){
                 <img className="handUp" src="/img/handUp.png" alt="hand" />
                 <img className="cloudLeft" src="/img/cloudLeft.png" alt="cloud" />
                 <div className='main-wraper'>
-                    <div  className="game-wraper"  id="container">
+                    <div className="game-wraper"  id="container">
                     {/* Here comes the game! */}
                     </div>
                 </div>

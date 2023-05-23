@@ -111,7 +111,7 @@
   .done .copy-msg{
     opacity: 1;
     transform: translateY(-2em);
-    background-color:rgba(0, 0, 0, 0.25); ;
+    background-color:rgba(0, 0, 0, 0.25);
   }
 
   .app-btn{

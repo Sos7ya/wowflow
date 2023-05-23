@@ -8,18 +8,18 @@ export default function MainContent(){
             <h2>ПИОНОПАД</h2>
             </div>
             <div className="maincontent-description">
-                <p>Подставляйте руки — это Пионопад!
+                <p className="disc-text">Подставляйте руки — это Пионопад!
                     Ожидаются осадки в виде охапок пионов
                         и крутых призов.
                 </p>
-                <p>
+                <p className="added-disc">
                 Ловите бутон, кликайте и забирайте подарок!
                 </p>
             </div>
             <div className="maincontent-disclaymer">
-                <h3>
+                <p>
                 У вас есть только 1 попытка каждые 24 часа
-                </h3>
+                </p>
             </div>
         </div>
 

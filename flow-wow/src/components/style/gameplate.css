@@ -52,23 +52,23 @@
 
 .handUp{
     position: absolute;
-    top: 260px;
+    top: 340px;
     left: 0;
-    width: 30vw;
+    width: 35vw;
     z-index: 5;
 }
 
 .handDown{
     position: absolute;
     top: 540px;
-    right: 0;
-    width: 30vw;
+    right: 0px;
+    width: 35vw;
     z-index: 5;
 }
 
 .cloudLeft{
     position: absolute;
-    top: 260px;
+    top: 340px;
     right: 0;
     z-index: 4;
 }
@@ -87,7 +87,7 @@
     
 
     .game-wraper{
-        width: 70vw;
-        height: 70vw;
+        width: 60vw;
+        height: 60vw;
     }
 }

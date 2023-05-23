@@ -1,33 +1,50 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { 
-    ACTION_VALUE_ALICE,
-    TActionDetaliGame} from "./type";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { fetchData } from "./GameApi";
 
-import {getActionDetaliAction} from './thunk'
-
-
-const initialState : TActionDetaliGame={
-    loading: false,
-    dataSourse: null,
+export interface GameState{
+    answer: 
+    {id: number;
+    value: string;
+    promo: string;};
+    status: 'idle' | 'loading' | 'failed';
 }
 
-const gameSlice = createSlice({
-    name: ACTION_VALUE_ALICE,
-    initialState,
-    reducers:{
+const initialState: GameState = {
+    answer:{
+        id: 0,
+        value:' ',
+        promo: ' ',
     },
-    extraReducers: (builder)=>{
-        builder.addCase(getActionDetaliAction.pending, (state)=>{
-            state.loading = true;
-        });
-        builder.addCase(getActionDetaliAction.fulfilled, (state, {payload})=>{
-            state.dataSourse = payload;
-            state.loading = false;
-        });
-        builder.addCase(getActionDetaliAction.rejected, (state, {payload})=>{
-            state.loading = false;
-        });
+    status: 'idle',
+}
+
+export const getGameData = createAsyncThunk(
+    'game/getData',
+    async() =>{
+        const response = await fetchData();
+        return response;
     }
-});
+)
+
+export const gameSlice = createSlice({
+    name: 'game',
+    initialState,
+    reducers:{},
+    extraReducers:(builder) =>{
+        builder
+            .addCase(getGameData.pending, (state)=>{
+                state.status = 'loading';
+            })
+            .addCase(getGameData.fulfilled, (state, action)=>{
+                state.status = 'idle'
+                // state.answer = action.payload
+            })
+            .addCase(getGameData.rejected, (state)=>{
+                state.status = 'failed'
+            })
+    }
+})
+
+
 
 export default gameSlice.reducer;
