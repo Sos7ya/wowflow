@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     top: 50%;
+    margin-top: 10px;
 }
 
 .main-wraper{
@@ -53,7 +54,7 @@
 
 .handUp{
     position: absolute;
-    top: 370px;
+    top: 320px;
     left: 0;
     width: 35vw;
     z-index: 5;
@@ -61,7 +62,7 @@
 
 .handDown{
     position: absolute;
-    top: 580px;
+    top: 550px;
     right: 0px;
     width: 35vw;
     z-index: 5;
@@ -69,14 +70,14 @@
 
 .cloudLeft{
     position: absolute;
-    top: 370px;
+    top: 320px;
     right: 0;
     z-index: 4;
 }
 
 .cloudRight{
     position: absolute;
-    top: 580px;
+    top: 550px;
     left: 0;
     z-index: 4;
 }

@@ -91,7 +91,7 @@
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    padding: 10px;
+    padding: 11px;
     gap: 7px;
     width: 105px;
     height: 33px;
@@ -114,7 +114,6 @@
     transition: all .500s;
     border-radius: 6.6px;
     padding: 10px;
-    padding-bottom: 12px;
     color: #ffff;
   }
 
@@ -129,7 +128,7 @@
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    padding: 10px;
+    padding: 11px;
     gap: 6.6px;
     width: 150px;
     height: 33px;
