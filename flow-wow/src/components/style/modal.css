@@ -40,7 +40,7 @@
   .modal-footer {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 30px;
   }
   
   .modal-header {
