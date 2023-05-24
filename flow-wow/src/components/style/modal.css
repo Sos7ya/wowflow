@@ -22,7 +22,8 @@
     max-width: 550px;
     background: white;
     position: relative;
-    margin: 0 20px;
+    /* margin: 0 20px; */
+    padding: 30px 20px;
     max-height: calc(50vh - 30px);
     text-align: center;
     display: flex;
@@ -40,7 +41,7 @@
   .modal-footer {
     display: flex;
     align-items: center;
-    padding: 30px;
+    /* padding: 30px; */
   }
   
   .modal-header {
@@ -76,7 +77,7 @@
   }
   
   .modal-content {
-    padding: 1rem;
+    /* padding: 1rem; */
     text-align: center;
     color: #F98DBF;
 
@@ -153,7 +154,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
 
     color: #000000;
   }

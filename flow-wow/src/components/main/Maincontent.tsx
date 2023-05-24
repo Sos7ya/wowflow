@@ -15,13 +15,13 @@ export default function MainContent(){
                 Ловите бутон, кликайте <p>и забирайте подарок!</p>
                 </p>
             </div>
-            </div>
-            <div className="maincontent-disclaymer">
-                <p>
-                У вас есть только 1 попытка каждые 24 часа
-                </p>
-            </div>
-        </>
+        </div>
+        <div className="maincontent-disclaymer">
+            <p>
+            У вас есть только 1 попытка каждые 24 часа
+            </p>
+        </div>
+    </>
 
     )
 }
