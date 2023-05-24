@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import '../style/gameplate.css'
 import Modal from "../modal/modal";
 import MainContent from "../main/Maincontent";

@@ -14,15 +14,14 @@
 .star-logo{
     display: flex;
     position: absolute;
-    /* left: 47%; */
     right: 50.5%;
-    /* width: 17px;
-    height: 17px; */
-    padding-top: 16px;
+    padding-top: 13px;
 }
 
 .star-logo img{
-    scale: 3;
+    scale: 2;
+    width: 17px;
+    height: 17px;
     /* position: absolute;
     left: 32.5%;
     right: 62.78%;
