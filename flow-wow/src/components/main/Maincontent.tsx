@@ -3,6 +3,7 @@ import '../style/maincontent.css'
 
 export default function MainContent(){
     return(
+        <>
         <div className="maincontent-wraper">
             <div className="maincontent-title">
                 <h2>ПИОНОПАД</h2>
@@ -14,12 +15,13 @@ export default function MainContent(){
                 Ловите бутон, кликайте и забирайте подарок!
                 </p>
             </div>
+            </div>
             <div className="maincontent-disclaymer">
                 <p>
                 У вас есть только 1 попытка каждые 24 часа
                 </p>
             </div>
-        </div>
+        </>
 
     )
 }

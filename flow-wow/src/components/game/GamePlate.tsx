@@ -4,20 +4,13 @@ import Modal from "../modal/modal";
 import MainContent from "../main/Maincontent";
 import { Linear, TweenLite, TweenMax, Sine } from "gsap";
 
-
-import { useAppDispatch } from "../store/hook";
-import { getGameData } from "../store/slice";
-
-
 export default function GamePlate(){
-    const disp = useAppDispatch()
-    const [modalData, setModalData] = useState(true)
 
     useEffect(()=>{
         const papa =  document.getElementById('container')
         function R(min:number,max:number) {return min+Math.random()*(max-min)};
         const w = 10;
-        const total: number = 30;
+        const total: number = 21;
         for(let i=0; i<total; i++){
             const test = document.createElement('div');
             TweenLite.set(test,{attr:{class:'element'},x:R(-10,w),y:-100});
@@ -27,7 +20,7 @@ export default function GamePlate(){
                 setModal(true)
                 console.log()
             })
-            test.innerHTML = '<img src = "/flower.png" alt = "no img"></img>'
+            test.innerHTML = `<img src = "/img/flowers/flower_${i}.png" alt = "no img"></img>`
             papa?.appendChild(test);
         }
         function anim(elm:any){
