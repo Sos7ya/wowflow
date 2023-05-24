@@ -6,7 +6,7 @@ import { Linear, TweenLite, TweenMax, Sine } from "gsap";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
-import { fetchUser } from "../actions/userData";
+// import { fetchUser } from "../actions/userData";
 import { getReward } from "../actions/reward";
 
 export default function GamePlate(){
@@ -45,7 +45,7 @@ export default function GamePlate(){
         }
         
     const [isModal, setModal] = useState(false);
-    let mockText = 'угадали!';
+    let mockText = 'ой-ой!';
     
 
     return(
@@ -53,8 +53,8 @@ export default function GamePlate(){
         <MainContent />
         <Modal
             isVisible={isModal}
-            title={reward.title}
-            ContentText={reward.text}
+            title={reward.title === undefined?mockText:reward.title}
+            ContentText={reward.text === undefined?'Кажется что-то пошло не так... Давай попробуем сыграть еще раз!': reward.text}
             content={reward.promo}
             
             onClose={() => setModal(false)}
