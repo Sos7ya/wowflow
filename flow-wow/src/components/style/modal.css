@@ -114,6 +114,7 @@
     transition: all .500s;
     border-radius: 6.6px;
     padding: 10px;
+    padding-bottom: 12px;
     color: #ffff;
   }
 
