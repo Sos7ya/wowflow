@@ -12,9 +12,12 @@ import { getReward } from "../actions/reward";
 export default function GamePlate(){
     const dispatch = useDispatch();
     const userData = useSelector((state)=>state.userData);
-    const reward = useSelector((state)=> state.reward);
-
+    const result = useSelector((state)=> state.result);
+    let hoursDiff
+    
+    
     useEffect(()=>{
+        
         const papa =  document.getElementById('container')
         function R(min,max) {return min+Math.random()*(max-min)};
         const w = 10;
@@ -25,10 +28,10 @@ export default function GamePlate(){
             anim(test);
             test.style.cursor = 'pointer';
             test.addEventListener('click',()=>{
+                getData()
                 play()
                 setModal(true)
-                console.log()
-                console.log(`${userData}`)
+                console.log(hoursDiff)
             })
             test.innerHTML = `<img src = "/img/flowers/flower_${i}.png" alt = "no img"></img>`
             papa?.appendChild(test);
@@ -39,29 +42,50 @@ export default function GamePlate(){
             TweenMax.to(elm,R(2,8),{rotation:(360),repeat:-1,yoyo:false,ease:Sine.easeInOut,delay:-5});
             TweenMax.to(elm, {scale:R(1, 1.9)});
         }
-
-        dispatch(fetchUser())
-        },[dispatch])
+        })
 
         const play = (e) =>{
             dispatch(getReward())
-            console.log(`${reward}`)
+            // if(result.isFact){
+            //     result.promo = result.promocode
+            // }
+            // else{
+            //     result.promo = result.text1
+            // }
+    
+            console.log(`${result}`)
+        }
+
+        const getData = ()=>{
+            dispatch(fetchUser())
+            let lastPlayed = new Date(userData.lastTimePlayed)
+            let today = new Date()
+    
+            let timeDiff = Math.abs(lastPlayed.getTime() - today.getTime())
+            hoursDiff = Math.ceil(timeDiff/(1000*3600))
+            console.log(hoursDiff)
+            if(hoursDiff>24){
+                return true
+            }
         }
         
+        
     const [isModal, setModal] = useState(false);
-    let mockText = 'ой-ой!';
+    let mockText = 'Следующая попытка доступна через 24 часа';
+
     
 
     return(
         <>
-        <MainContent />
-        <Modal
-            isVisible={isModal}
-            title={reward.title === undefined?mockText:reward.title}
-            ContentText={reward.text === undefined?'Кажется что-то пошло не так... Давай попробуем сыграть еще раз!': reward.text}
-            content={reward.promo}
-            
-            onClose={() => setModal(false)}
+            <MainContent />
+            <Modal
+                isVisible={isModal}
+                title={getData ? mockText: result.title && result.title === undefined ? mockText:result.title}
+                ContentText={result.text === undefined ? 'Кажется что-то пошло не так... Давай попробуем сыграть еще раз!': result.text}
+                promo={result.promo === undefined? 'sorry': result.promo}
+                isFact={result.isFact}
+                isRules={false}
+                onClose={() => setModal(false)}
             />
             <div className="game-area">
                 <img className="handUp" src="/img/handUp.png" alt="hand" />

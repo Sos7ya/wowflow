@@ -5,13 +5,15 @@ import { keyboardKey } from "@testing-library/user-event";
 interface IProps{
     isVisible: boolean
     title: ReactNode,
-    ContentText: string
+    ContentText: ReactNode,
     promo: string,
     onClose: ()=> void
+    isRules: boolean
+    isFact: boolean
 }
 
 
-const Modal = ({ isVisible = false, title, ContentText ,promo, onClose }:IProps) => {
+const Modal = ({ isVisible = false, title, ContentText ,promo, onClose, isFact, isRules }:IProps) => {
      
     const keydownHandler = ({ key }:keyboardKey) => {
       switch (key) {
@@ -25,28 +27,35 @@ const Modal = ({ isVisible = false, title, ContentText ,promo, onClose }:IProps)
     useEffect(() => {
       document.addEventListener('keydown', keydownHandler);
       return () => document.removeEventListener('keydown', keydownHandler);
-
     });
     
     // const [gotPromo, setNonVisable] = useState(false)
     // promo! ? setNonVisable(false) : setNonVisable(true)
     const [done, copyDone] = useState(false)
+    const [rules, setStyle] = useState(false)
+    const[fact, setFact] = useState(false)
+
+    useEffect(()=>{
+      isRules? setStyle(true) : setStyle(false)
+      isFact? setFact(true) : setFact(false)
+    },[isRules, isFact])
 
     return !isVisible ? null : (
-      <div className="modal" onClick={onClose}>
-        <div className="modal-dialog" onClick={e => e.stopPropagation()}>
+      <div className="modal">
+        <div className={`${!rules?"modal-dialog":'modal-body-rules'}`} onClick={e => e.stopPropagation()}>
           <div className="modal-header">
             <h3 className="modal-title">{title}</h3>
-            {/* <span className="modal-close" onClick={onClose}>
+            <span className={`${!isRules?'NONcopy-btn':"modal-close"}`} onClick={onClose}>
               &times;
-            </span> */}
+            </span>
           </div>
-          <div className="modal-body">
+          <div className='modal-body'>
             <div className="modal-content-text">{ContentText}</div>
+            <div className={`${!fact?"modal-promo-title":'NONcopy-btn'}`}><p>промокод:</p></div>
             <div id="content" className="modal-content">{promo}</div>
           </div>
 
-          {<div className="modal-footer"><button className={`copy-btn ${done? 'done' : 'wait'}`} onClick={()=> {
+          {<div className={`${!fact ? "modal-footer":'NONcopy-btn'}`}><button className={`copy-btn ${done? 'done' : 'wait'}`} onClick={()=> {
             copyDone(true);
             setInterval(()=> copyDone(false), 700);
             navigator.clipboard.writeText(promo);

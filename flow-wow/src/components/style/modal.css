@@ -18,7 +18,8 @@
   }
   
   .modal-dialog {
-    width: 252px;
+    height: fit-content;
+    gap: 20px;
     max-width: 550px;
     background: white;
     position: relative;
@@ -45,8 +46,10 @@
   }
   
   .modal-header {
+    display: flex;
     text-align: center;
     align-items: center;
+    margin-bottom: 14px;
   }
   .modal-title{
     font-family: 'Montserrat';
@@ -56,7 +59,7 @@
     line-height: 24px;
     text-transform: uppercase;
     color: #F98DBF;
-    width: 206px;
+    width: 70%;
     height: 43px;
   }
   
@@ -73,6 +76,10 @@
   }
   
   .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     overflow: auto;
   }
   
@@ -104,6 +111,10 @@
     border: none;
     border-radius: 6.6px;
     color: #ffff;
+  }
+
+  .NONcopy-btn{
+    display: none;
   }
 
   .copy-msg{
@@ -157,4 +168,51 @@
     padding: 20px 0;
 
     color: #000000;
+  }
+
+  .modal-promo-title{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+
+    color: #9D9D9D;
+  }
+
+
+  .modal-body-rules{
+    width: 70%;
+    height: 70%;
+    background: white;
+    position: relative;
+    /* margin: 0 20px; */
+    padding: 30px 20px;
+    max-height: calc(50vh - 30px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* box-shadow: 0.949172px 7.11879px 47.4586px 4.74586px #F98DBF; */
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+    border-radius: 24px;
+  }
+
+  .modal-body-rules .copy-btn{
+      display: none;
+  }
+
+  @media screen and (max-width:1024px){
+    .modal-body {
+      overflow: visible;
+      width: 100%;
+    }
   }

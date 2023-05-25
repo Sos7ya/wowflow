@@ -1,10 +1,10 @@
-const reward = (reward = '', action) => {
+const result = (result = '', action) => {
     switch(action.type){
         case 'REWARD':
             return action.payload;
         default:
-            return reward;
+            return result;
     }
 }
 
-export default reward;
+export default result;
