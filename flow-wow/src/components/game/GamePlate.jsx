@@ -6,7 +6,7 @@ import { Linear, TweenLite, TweenMax, Sine } from "gsap";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
-// import { fetchUser } from "../actions/userData";
+import { fetchUser } from "../actions/userData";
 import { getReward } from "../actions/reward";
 
 export default function GamePlate(){
@@ -28,16 +28,20 @@ export default function GamePlate(){
                 play()
                 setModal(true)
                 console.log()
+                console.log(`${userData}`)
             })
             test.innerHTML = `<img src = "/img/flowers/flower_${i}.png" alt = "no img"></img>`
             papa?.appendChild(test);
         }
+
         function anim(elm){
             TweenMax.to(elm,R(10,25),{y:250,ease:Linear.easeNone,repeat:-1,delay:-30});
             TweenMax.to(elm,R(2,8),{rotation:(360),repeat:-1,yoyo:false,ease:Sine.easeInOut,delay:-5});
             TweenMax.to(elm, {scale:R(1, 1.9)});
-            }
-        },[])
+        }
+
+        dispatch(fetchUser())
+        },[dispatch])
 
         const play = (e) =>{
             dispatch(getReward())
