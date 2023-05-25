@@ -86,5 +86,7 @@
     .game-wraper{
         width: 60vw;
         height: 60vw;
+        border-radius: 50%;
+        overflow: hidden;
     }
 }
