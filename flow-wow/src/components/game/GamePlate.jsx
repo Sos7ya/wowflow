@@ -26,7 +26,7 @@ export default function GamePlate(){
             const test = document.createElement('div');
             for(let z=1; z<11; z++){
             const pic = document.createElement('img');
-            pic.src = `/img/smol/Peony_${z}.png`
+            pic.src = `/img/smol/test/Peony_${z}.png`
             TweenLite.set(test,{attr:{class:'element'},x:R(-10,w),y:-400});
             anim(pic);
             pic.style.cursor = 'pointer';
