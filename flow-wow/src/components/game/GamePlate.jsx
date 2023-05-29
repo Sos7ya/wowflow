@@ -24,15 +24,20 @@ export default function GamePlate(){
         const total = 8;
         for(let i=1; i<total; i++){
             const test = document.createElement('div');
+            for(let z=1; z<15; z++){
+            const pic = document.createElement('img');
+            pic.src = `/img/smol/Peony_${z}.png`
             TweenLite.set(test,{attr:{class:'element'},x:R(-10,w),y:-100});
-            anim(test);
-            test.style.cursor = 'pointer';
-            test.addEventListener('click',()=>{
+            anim(pic);
+            pic.style.cursor = 'pointer';
+            pic.addEventListener('click',()=>{
                 getData()
                 play()
                 setModal(true)
             })
-            test.innerHTML = `<img src = "/img/smol/Peony_${i}.png" alt = "no img"></img>`
+            test?.appendChild(pic)
+            }
+            // test.innerHTML = `<img src = "/img/smol/Peony_${i}.png" alt = "no img"></img>`
             papa?.appendChild(test);
         }
 
