@@ -36,11 +36,11 @@
 }
 
 .element{
-    width: 70px;
+    width: 400px;
     position: relative;
 }
 .element img{
-    width: 90%;
+    width: 100%;
 }
 
 .modal-btn{
