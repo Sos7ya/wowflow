@@ -21,8 +21,8 @@ export default function GamePlate(){
         const papa =  document.getElementById('container')
         function R(min,max) {return min+Math.random()*(max-min)};
         const w = 10;
-        const total = 21;
-        for(let i=1; i<5; i++){
+        const total = 25;
+        for(let i=1; i<total; i++){
             const test = document.createElement('div');
             TweenLite.set(test,{attr:{class:'element'},x:R(-10,w),y:-100});
             anim(test);
