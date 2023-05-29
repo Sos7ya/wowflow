@@ -21,13 +21,13 @@ export default function GamePlate(){
         const papa =  document.getElementById('container')
         function R(min,max) {return min+Math.random()*(max-min)};
         const w = 10;
-        const total = 8;
+        const total = 5;
         for(let i=1; i<total; i++){
             const test = document.createElement('div');
-            for(let z=1; z<15; z++){
+            for(let z=1; z<11; z++){
             const pic = document.createElement('img');
             pic.src = `/img/smol/Peony_${z}.png`
-            TweenLite.set(test,{attr:{class:'element'},x:R(-10,w),y:-100});
+            TweenLite.set(test,{attr:{class:'element'},x:R(-10,w),y:-400});
             anim(pic);
             pic.style.cursor = 'pointer';
             pic.addEventListener('click',()=>{
@@ -42,7 +42,7 @@ export default function GamePlate(){
         }
 
         function anim(elm){
-            TweenMax.to(elm,R(10,25),{y:650,ease:Linear.easeNone,repeat:-1,delay:-30});
+            TweenMax.to(elm,R(10,25),{y:850,ease:Linear.easeNone,repeat:-1,delay:-30});
             TweenMax.to(elm,R(2,8),{rotation:(360),repeat:-1,yoyo:false,ease:Sine.easeInOut,delay:-5});
             // TweenMax.to(elm, {scale:R(3, 6)});
         }
