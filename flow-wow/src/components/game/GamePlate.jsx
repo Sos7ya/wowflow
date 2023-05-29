@@ -22,7 +22,7 @@ export default function GamePlate(){
         function R(min,max) {return min+Math.random()*(max-min)};
         const w = 10;
         const total = 21;
-        for(let i=0; i<total; i++){
+        for(let i=1; i<5; i++){
             const test = document.createElement('div');
             TweenLite.set(test,{attr:{class:'element'},x:R(-10,w),y:-100});
             anim(test);
@@ -31,9 +31,8 @@ export default function GamePlate(){
                 getData()
                 play()
                 setModal(true)
-                console.log(hoursDiff)
             })
-            test.innerHTML = `<img src = "/img/flowers/flower_${i}.png" alt = "no img"></img>`
+            test.innerHTML = `<img src = "/img/flowerssvg/Peony_${i}.svg" alt = "no img"></img>`
             papa?.appendChild(test);
         }
 
