@@ -23,8 +23,9 @@
 
 .game-wraper{
     display: flex;
+    flex-direction: column;
     align-self: center;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
     height: 40vw;
     width: 40vw;
@@ -37,11 +38,12 @@
 
 .element{
     display: flex;
-    width: 200px;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
 }
 .element img{
     width: 100%;
-    scale: 3;
 }
 
 .modal-btn{
