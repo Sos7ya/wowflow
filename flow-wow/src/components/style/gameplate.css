@@ -23,7 +23,7 @@
 
 .game-wraper{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-self: center;
     align-items: center;
     justify-content: center;

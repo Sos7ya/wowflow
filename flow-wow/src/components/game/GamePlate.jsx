@@ -24,7 +24,7 @@ export default function GamePlate(){
         const total = 25;
         for(let i=1; i<total; i++){
             const test = document.createElement('div');
-            TweenLite.set(test,{attr:{class:'element'},x:R(-10,w),y:-100});
+            TweenLite.set(test,{attr:{class:'element'},x:R(-10,w),y:-500});
             anim(test);
             test.style.cursor = 'pointer';
             test.addEventListener('click',()=>{
