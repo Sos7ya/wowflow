@@ -1,0 +1,93 @@
+.game-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    margin-top: 28px;
+}
+
+.main-wraper{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    padding: 25px;
+    filter:  drop-shadow(0px 0px 2.0064px #FFFFFF);
+
+    /* filter: drop-shadow(0px 0px 14.0448px #FFFFFF) drop-shadow(0px 0px 4.01281px #FFFFFF) drop-shadow(0px 0px 2.0064px #FFFFFF); */
+}
+
+.game-wraper{
+    display: flex;
+    align-self: center;
+    align-items: baseline;
+    justify-content: center;
+    height: 40vw;
+    width: 40vw;
+    filter: none;
+    background: #FFFFFF;
+    /* box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.25); */
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+
+.element{
+    width:70px;
+}
+.element img{
+    width: 100%;
+    object-fit:cover;
+    padding: 0;
+}
+
+.modal-btn{
+    padding: 5px 5px;
+    align-self: center;
+    text-align: center;
+}
+
+.handUp{
+    position: absolute;
+    scale: 0.8;
+    top: 260px;
+    left: -14px;
+    width: 35vw;
+    z-index: 5;
+}
+
+.handDown{
+    position: absolute;
+    scale: 0.9;
+    top: 520px;
+    right: -6px;
+    width: 30vw;
+    z-index: 5;
+}
+
+.cloudLeft{
+    position: absolute;
+    top: 260px;
+    right: 0;
+    z-index: 4;
+}
+
+.cloudRight{
+    position: absolute;
+    top: 530px;
+    left: 0;
+    z-index: 0;
+}
+
+@media screen and (max-width:768px) {
+    .game-wraper{
+        width: 60vw;
+        height: 60vw;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}
